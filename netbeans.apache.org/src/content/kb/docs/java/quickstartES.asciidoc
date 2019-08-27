@@ -1,0 +1,137 @@
+// 
+//     Licensed to the Apache Software Foundation (ASF) under one
+//     or more contributor license agreements.  See the NOTICE file
+//     distributed with this work for additional information
+//     regarding copyright ownership.  The ASF licenses this file
+//     to you under the Apache License, Version 2.0 (the
+//     "License"); you may not use this file except in compliance
+//     with the License.  You may obtain a copy of the License at
+// 
+//       http://www.apache.org/licenses/LICENSE-2.0
+// 
+//     Unless required by applicable law or agreed to in writing,
+//     software distributed under the License is distributed on an
+//     "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+//     KIND, either express or implied.  See the License for the
+//     specific language governing permissions and limitations
+//     under the License.
+//
+
+= Tutorial de inicio rápido con Java
+:jbake-type: tutorial
+:jbake-tags: tutorials 
+:jbake-status: published
+:syntax: true
+:icons: font
+:source-highlighter: pygments
+:icons: font
+:toc: left
+:toc-title:
+:description: NetBeans IDE Java Quick Start Tutorial - Apache NetBeans
+:keywords: Apache NetBeans, Tutorials, NetBeans IDE Java Quick Start Tutorial
+:reviewed: 2019-04-06
+:experimental:
+
+¡ Bienvenidos a Apache NetBeans IDE !
+
+En este tutorial, que te llevará aproximadamente 10 minutos completar, se te proporciona una introducción rápida al esquema de desarrollo básico con Java en Entorno Integrado de Desarrollo (IDE por sus siglas en Inglés) de Netbeans.
+ 
+
+NOTE: El objetivo de este tutorial es que te introduzcas al desarrollo Java con Maven en el IDE de Netbeans. No es necesario completar este tutorial para empezar a enteder y trabajar con el lenguaje Java, ver link:https://docs.oracle.com/javase/tutorial/index.html[Tutoriales Java], y para comprender Maven link:https://maven.apache.org[Website Apache Maven].
+
+== Configuración del Proyecto 
+
+A continuación, realiza los siguientes pasos para configurar un nuevo proyecto en Java.
+
+1. En el IDE de Netbeans, elije File > New Project o haz click en el botón "New Project" de la barra de herramientas.
+
+2. En el asistente New Project, selecciona Java Application, como se muestra en la figura inferior. Después haz click en Next.
+
+[.feature]
+--
+image::images/proj-wizard-maven2-small.png[role="left", link="images/proj-wizard-maven2.png"]
+--
+
+NOTE: La primera vez que creas un nuevo proyecto en Java, se solicitará descargar y habilitar el soporte para Java. Sigue las indicaciones e instala como lo recomienda el asistente.
+
+[start=3]
+3. En la página de Name and Location del asistente, introduce `HelloWorldApp` en el campo the Project Name, (como se muestar en la siguiente figura):
+
+[.feature]
+--
+image::images/proj-wizard2-maven-small.png[role="left", link="images/proj-wizard2-maven.png"]
+--
+Haz click en Finish.
+
+Se apertura el proyecto creado. 
+
+== Crear un Archivo Fuente de Java
+
+Hacer click derecho en el nombre del paquete y elegir New | Java Class, (como se muestra en la siguiente figura):
+
+[.feature]
+--
+image::images/proj-wizard3-maven-small.png[role="left", link="images/proj-wizard3-maven.png"]
+--
+
+En el asistente de New Java Class, introduce `Main` en el campo Class Name, (como se muestra en la siguiente figura): 
+
+[.feature]
+--
+image::images/proj-wizard4-maven-small.png[role="left", link="images/proj-wizard4-maven.png"]
+--
+
+Haz click en Finish.
+
+El archivo fuente en Java es creado y abierto. 
+
+Se deben visualizar los siguientes componentes, (como se muestra en la siguiente figura):
+
+*  *Projects window:* Superior izquierda, contiene una vista de árbol de los componentes del proyecto, incluyendo los archivos fuente, librerías de los que depende tu código, entre otros.
+*  *Source Editor:* Área central, contiene archivos, donde la mayoría de tu trabajo se llevará a cabo, actualmente se encuentra abierto el archivo fuente de Java nombrado 'Main'.
+*  *Navigator:* Inferior izquierda, útil para la navegación rápida entre los elementos de la clase seleccionada.
+
+[.feature]
+--
+image::images/proj-opened-maven-small.png[role="left", link="images/proj-opened-maven.png"]
+--
+
+== Agregar código al archivo fuente de Java
+
+Se ha creado un esqueleto de la clase main. Agregaremos algún contenido básico para producir el mensaje 'hello world'.
+
+1. Entre las llaves, introduce `psvm` y presiona kbd:[Tab]. Ahora deberás visualizar la instrucción `public static void main`. 
+
+2. Dentro de la instrucción `public static void main`, introduce `sout` y presiona kbd:[Tab]. Ahora deberás visualizar la instrucción  `System.out.println`.
+
+3. Dentro de las comillas dobles, introduce `hello world`. 
+
+Ahora deberás ver lo siguiente:
+
+[.feature]
+--
+image::images/file-opened-maven-small.png[role="left", link="images/file-opened-maven.png"]
+--
+
+Nota que cuando presionas kbd:[Ctrl+Space], el editor muestra diversas formas de completar el código desde donde se encuentra el cursor, así como la documentación relacionada:
+
+[.feature]
+--
+image::images/editor-cc-maven2-small.png[role="left", link="images/editor-cc-maven2.png"]
+--
+
+Para una descripción completa de las características del asistente del editor, ver link:https://netbeans.apache.org/kb/docs/java/editor-codereference.html[Asistente de Código en el editor de Java del IDE Netbeans: Guía de Referencia].
+
+== Ejecutar la Aplicación
+
+Asegúrate de guardar el archivo fuente de Java, haz click derecho al proyecto y elige Run o elige Run Project desde el menú Run. Haz click en Select Main Class.
+
+En la ventana Output (que puede abrirse desde el menú Window), deberás visualizar lo siguiente.
+
+image::images/run-output-maven-small.png[role="left", link="images/run-output-maven.png"]
+
+¡Felicitaciones! Tu aplicación funciona.
+
+Puedes visualizar la salida del código al abrir la ventana Files (desde el menú Window) y expandir el nodo `target`.
+
+Ahora ya sabes cómo realizar las tareas más comunes para el desarrollo en Java. Para aprender un flujo de trabajo completo, incluyendo pruebas y depuración, ver link:https://netbeans.apache.org/kb/docs/java/javase-intro.html[Desarrollando Aplicaciones Generales en Java].
